@@ -1,0 +1,124 @@
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.grass,
+.road,
+.sky {
+    position: relative;
+}
+
+.sky {
+    background: skyblue;
+    height: 250px;
+}
+
+
+/* 
+.sky_round {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(20deg, rgba(255, 255, 255, 1)59%, rgba(255, 224, 198, 1)73%);
+    border-radius: 50%;
+    top: 20px;
+    left: 30px;
+} */
+
+.img1 {
+    width: 250px;
+    height: 200px;
+    position: absolute;
+}
+
+.img2 {
+    width: 200px;
+    margin-top: 20px;
+    opacity: 0.8;
+    position: absolute;
+    animation: wind 60s linear infinite;
+}
+
+.img_2A {
+    width: 100px;
+    height: 100px;
+    opacity: 0.6;
+    position: absolute;
+    top: 30px;
+    animation: wind 40s linear infinite reverse;
+}
+
+.grass {
+    background: seagreen;
+    height: 170px;
+}
+
+.road {
+    background: dimgray;
+    height: 200px;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid grey;
+}
+
+.lines {
+    box-sizing: border-box;
+    border: 5px dashed #fff;
+    margin-top: 6%;
+}
+
+.img3 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -60px;
+    left: 0%;
+    animation: drive 5s linear infinite both, jump 0.3s 1.2s ease;
+}
+
+.img4 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    animation-fill-mode: both;
+    animation-name: drive;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes drive {
+    from {
+        transform: translateX(-200px);
+    }
+    to {
+        transform: translateX(1400px);
+    }
+}
+
+@keyframes wind {
+    from {
+        left: 300px;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        top: -60px;
+    }
+    90% {
+        top: -100px;
+    }
+    100% {
+        top: -60px;
+    }
+}
